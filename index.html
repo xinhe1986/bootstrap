@@ -27,15 +27,98 @@
                     <h2>a better way to camp</h2>
                 </div>
                 <!--Task 3 Step 1,2,3,4-->
-                <div class="col-md-4 col-xl-2 mt-4">
+                <!--<div class="col-md-4 col-xl-2 mt-4">
                     <a href="#reserveForm" role="button" class="btn btn-lg btn-info" data-bs-toggle="tooltip"
                     data-bs-placement="bottom" data-bs-html="true" title="Or call us at <br><strong>1-206-555-1234</strong>">
+                        Reserve Campsite
+                    </a>
+                </div>-->
+                <!--Make the button activate a Modal-->
+                <div class="col-md-4 col-xl-2 mt-4">
+                    <a role="button" class="btn btn-lg btn-info" data-bs-toggle="modal" data-bs-target="#reserveModal" id="#reserveModal">
                         Reserve Campsite
                     </a>
                 </div>
             </div>
         </div>
     </header>
+    <!--Make the reservation form modal: copy the login modal here-->
+    <div class="modal fade" id="reserveModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h3 class="modal-title">Reserve a Campsite</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" arial-label="Close"></button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form>
+                        <!--Deleted part copied from the login modal-->
+                        <!--<div class="row">
+                            <div class="mb-3 col-12">
+                                <label class="sr-only" for="loginEmail">Email address</label>
+                                <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                            </div>
+                            <div class="mb-3 col-12">
+                                <label class="sr-only" for="loginPassword">Password</label>
+                                <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                            </div>
+                            <div class="col">
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">Remember me</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                    Save changes
+                                </button>
+                            </div>
+                        </div>-->
+
+                        <!--from the reservation form near the bottom of the page that you added earlier this week, 
+                            take all the contents inside the form element and 
+                            move it inside the form element in the modal.-->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label class="col-form-label" for="nuCampers">Number of Campers</label>
+                                <div>
+                                    <select name="numCampers" id="numCampers" class="form-control">
+                                        <option>Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!--I still feel confused about XS Viewport and SM Viewports, doesn't know how to fix it here, it is copied(the same as above)-->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <!--Task 2 Step 11: Inside the second row, add a label with the text content "Date" and...-->
+                                <label for="date" class="col-form-label">Date</label>
+                                <div class="">
+                                    <input type="date" name="date" id="date" placeholder="mm/dd/yy" class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="col-2 mt-3">
+                                <button type="submit" class="text-bg-primary" data-bs-dismiss="modal">Cancel</button>
+                            </div>
+                            <div class="col-2 mt-3">
+                                <button type="submit" class="text-bg-primary">Search</button>
+                            </div>
+                        </div>   
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!--Navigation goes here-->
     <nav class="navbar navbar-expand-sm navbar-dark stick-top">
@@ -150,56 +233,11 @@
             </div>
         </div>
         <!--Task 2 step 3: Just above that closing </div> tag(step 2), add a new div element with a class attribute of "row row-content" in the start tag. This will add another row to this container.-->
-        <div class="row row-content">
-            <!--Task 2 step 4: add a column div with its requirements-->
-            <div class="mx-auto col-sm-9 col-lg-5">
-                <!--Task 2 step 5: add a card div with the Bootstrap card class-->
-                <div class="card">
-                    <!--Task 2 step 6: add a h3 element with a card-header class, containing the text "Reserve a Campsite"-->
-                    <h3 class="card-header text-bg-info text-light">Reserve a Campsite</h3>
-                    <!--Task 2 step 7: add a div with the card-body class-->
-                    <div class="card-body">
-                        <!--Task 2 step 8: Inside the card-body, create a form with the HTML form element-->
-                        <form action="" id="reserveForm">
-                            <!--Task 2 step 9: creat two row dives-->
-                            <div class="row mb-3">
-                                <div class="col-md-12">
-                                    <!--Task 2 step 10: 7 small tasks in this step-->
-                                    <label class="col-form-label" for="nuCampers">Number of Campers</label>
-                                    <div>
-                                        <select name="numCampers" id="numCampers" class="form-control">
-                                            <option>Select...</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--I still feel confused about XS Viewport and SM Viewports, doesn't know how to fix it here-->
-                            <div class="row mb-3">
-                                <div class="col-md-12">
-                                    <!--Task 2 Step 11: Inside the second row, add a label with the text content "Date" and...-->
-                                    <label for="date" class="col-form-label">Date</label>
-                                    <div class="">
-                                        <input type="date" name="date" id="date" placeholder="mm/dd/yy" class="form-control"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Task 2 Step 12,13: Add a third row in the form, and -->
-                            <div class="col mb-3">
-                                <button type="submit" class="text-bg-primary">Search</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--deleted: in my another html document: campsite task-->
+        
+        
     <!--Task 2 step 2:locate the closing tag for container div-->
-    </div>        
+            
     
     <footer>
         <div class="container">
@@ -230,8 +268,8 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script>
         //add custom Javascript for tooltip
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        //const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        //const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     </script>
 </body>
 </html>
